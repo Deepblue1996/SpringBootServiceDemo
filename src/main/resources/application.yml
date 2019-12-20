@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ruixin
+
+limit:
+  minMoney: 1
+  maxMoney: 9999
+  description: 最少要发${limit.minMoney}元
