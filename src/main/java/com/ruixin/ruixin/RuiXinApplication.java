@@ -20,7 +20,11 @@ public class RuiXinApplication extends SpringBootServletInitializer {
         SpringApplication.run(RuiXinApplication.class, args);
     }
 
-    //重写configure方法
+    /**
+     * 重写configure方法
+     * @param builder 参数
+     * @return 重新赋值
+     */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(RuiXinApplication.class);
