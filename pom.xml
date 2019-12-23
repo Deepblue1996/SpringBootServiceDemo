@@ -12,6 +12,7 @@
     <artifactId>ruixin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ruixin</name>
+    <packaging>war</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -63,9 +64,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
     </dependencies>
-
+    <repositories>
+        <repository>
+            <id>alibaba</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>

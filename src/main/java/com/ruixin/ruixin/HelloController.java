@@ -26,7 +26,8 @@ public class HelloController {
 //    public void setLimitConfig(LimitConfig limitConfig) {
 //        this.limitConfig = limitConfig;
 //    }
-    final LuckmoneyRepository luckmoneyRepository;
+    //@Resource
+    private LuckmoneyRepository luckmoneyRepository;
 
     @Autowired
     public HelloController(LuckmoneyRepository luckmoneyRepository) {
