@@ -19,6 +19,7 @@ public class RuiXinApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(RuiXinApplication.class, args);
     }
+
     //重写configure方法
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

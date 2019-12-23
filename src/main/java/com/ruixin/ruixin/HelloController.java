@@ -1,9 +1,11 @@
 package com.ruixin.ruixin;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用于标注控制层组件(如struts中的action)，@ResponseBody和@Controller的合集
@@ -24,6 +26,12 @@ public class HelloController {
 //    public void setLimitConfig(LimitConfig limitConfig) {
 //        this.limitConfig = limitConfig;
 //    }
+    final LuckmoneyRepository luckmoneyRepository;
+
+    @Autowired
+    public HelloController(LuckmoneyRepository luckmoneyRepository) {
+        this.luckmoneyRepository = luckmoneyRepository;
+    }
 
     /**
      * http - Get请求
@@ -32,5 +40,10 @@ public class HelloController {
     @GetMapping("/say")
     public String say() {
         return "HelloWorld:"+limitConfig.getDescription();
+    }
+
+    @GetMapping("/all")
+    public List<Luckmoney> luckmoneyList() {
+        return luckmoneyRepository.findAll();
     }
 }
